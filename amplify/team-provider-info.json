@@ -1,15 +1,23 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-leafriverflow-dev-204414-authRole",
-      "UnauthRoleArn": "arn:aws:iam::590332394460:role/amplify-leafriverflow-dev-204414-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::590332394460:role/amplify-leafriverflow-dev-204414-authRole",
-      "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-leafriverflow-dev-204414-deployment",
-      "UnauthRoleName": "amplify-leafriverflow-dev-204414-unauthRole",
-      "StackName": "amplify-leafriverflow-dev-204414",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:590332394460:stack/amplify-leafriverflow-dev-204414/fd257ea0-d2b1-11ec-8995-0ededd3b2f31",
-      "AmplifyAppId": "d3j328inzj1qvu"
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-leafriverflow-dev-204414-authRole",
+            "UnauthRoleArn": "arn:aws:iam::590332394460:role/amplify-leafriverflow-dev-204414-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::590332394460:role/amplify-leafriverflow-dev-204414-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-leafriverflow-dev-204414-deployment",
+            "UnauthRoleName": "amplify-leafriverflow-dev-204414-unauthRole",
+            "StackName": "amplify-leafriverflow-dev-204414",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:590332394460:stack/amplify-leafriverflow-dev-204414/fd257ea0-d2b1-11ec-8995-0ededd3b2f31",
+            "AmplifyAppId": "d3j328inzj1qvu"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d3j328inzj1qvu",
+                    "type": "cicd"
+                }
+            }
+        }
     }
-  }
 }

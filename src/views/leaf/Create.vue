@@ -9,32 +9,32 @@
 </template>
 
 <script>
-import { API } from "aws-amplify";
-import { createAlbum } from "../../graphql/mutations";
+import { API } from 'aws-amplify'
+import { createLeaf } from '../../graphql/mutations'
 
 export default {
   name: 'LeafCreate',
-  data() {
+  data () {
     return {
       form: {
-        text: "",
-      },
-    };
+        text: ''
+      }
+    }
   },
   methods: {
-    async submitCreate() {
+    async submitCreate () {
       await API.graphql({
         query: createLeaf,
-        variables: { input: this.form },
+        variables: { input: this.form }
       })
         .then((result) => {
-          console.log(result);
-          this.$router.push({ name: "LeafIndex" });
+          console.log(result)
+          this.$router.push({ name: 'LeafIndex' })
         })
         .catch((error) => {
-          console.log(error);
-        });
-    },
+          console.log(error)
+        })
+    }
   }
-};
+}
 </script>
