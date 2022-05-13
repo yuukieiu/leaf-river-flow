@@ -6,7 +6,7 @@ import Amplify from 'aws-amplify'
 import AwsExports from './aws-exports'
 import {
   applyPolyfills,
-  defineCustomElements,
+  defineCustomElements
 } from '@aws-amplify/ui-components/loader'
 
 Amplify.configure(AwsExports)
