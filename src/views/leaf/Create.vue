@@ -29,7 +29,7 @@ export default {
       })
         .then((result) => {
           console.log(result)
-          this.$router.push({ name: 'LeafIndex' })
+          this.$router.push({ name: 'LeafCreate' })
         })
         .catch((error) => {
           console.log(error)
