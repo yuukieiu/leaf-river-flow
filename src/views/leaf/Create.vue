@@ -1,11 +1,39 @@
 <template>
+  <v-container>
   <div>
     <h1>葉っぱに書く</h1>
-    <form @submit.prevent="submitCreate">
-      <input v-model="form.text" placeholder="イヤなこと…" /><br />
-      <input type="submit" value="流す" />
-    </form>
+    <v-img
+      max-height="300"
+      max-width="300"
+      src='../../../public/img/leaf1.png'
+      >
+      <v-row align-content="center" style="height: 300px">
+        <v-col align="center">{{ form.text }}</v-col>
+      </v-row>
+    </v-img>
+    <v-form
+        ref="form"
+        v-model="valid"
+        lazy-validation
+        @submit.prevent="submitCreate">
+        <v-text-field
+          v-model="form.text"
+          :counter="300"
+          :rules="nameRules"
+          label="イヤなこと…"
+          required
+        ></v-text-field>
+        <v-btn
+          :disabled="!valid"
+          color="success"
+          class="mr-4"
+          type="submit"
+        >
+          流す
+        </v-btn>
+      </v-form>
   </div>
+  </v-container>
 </template>
 
 <script>
@@ -18,7 +46,12 @@ export default {
     return {
       form: {
         text: ''
-      }
+      },
+      valid: true,
+      nameRules: [
+        v => !!v || 'なにか入力してね',
+        v => (v && v.length <= 300) || '300文字未満にしてね'
+      ]
     }
   },
   methods: {
